@@ -145,11 +145,3 @@ For a complete list of dependencies, refer to the [`package.json`](package.json)
 2. Follow the [Installation](#installation) steps to set up the project.
 
 3. Start the development server and make changes to the codebase. The app will automatically reload with your changes.
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
