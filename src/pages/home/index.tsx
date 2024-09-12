@@ -4,13 +4,7 @@ import { View , Text} from "react-native";
 
 export const Home: React.FC = () => {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <View className="flex-1 justify-center align-center">
       <Text>Api ne: {API_URL}</Text>
     </View>
   );
