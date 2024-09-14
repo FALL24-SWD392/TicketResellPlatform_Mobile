@@ -1,5 +1,3 @@
-const plugin = require('tailwindcss/plugin')
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./App.tsx', './src/**/*.{js,ts,jsx,tsx}'],
