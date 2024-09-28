@@ -32,3 +32,8 @@ export interface User {
   createdBy: string;
   updatedBy: string;
 }
+
+export interface Token{
+  accessToken: string;
+  refreshToken: string;
+}
