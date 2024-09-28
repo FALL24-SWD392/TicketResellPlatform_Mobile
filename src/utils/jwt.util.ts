@@ -1,13 +1,10 @@
 import { jwtDecode } from "jwt-decode";
+import { Token, User } from "../@type/user.type";
 
-const isValidToken = (token: string): boolean => {
-  if (!token) {
-    return false;
-  }
-  //   const decoded = jwtDecode<{ exp: number }>(token);
-  return true;
-};
+const decodeToken = (token: Token): User => {
+  return jwtDecode<User>(token.accessToken);
+}
 
 export const jwtUtil = {
-  isValidToken,
+  decodeToken,
 };

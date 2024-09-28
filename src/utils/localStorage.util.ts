@@ -1,9 +1,11 @@
-const setTokenToLocalStorage = (token: string) => {
-  localStorage.setItem("token", token);
+import { Token } from "../@type/user.type";
+
+const setTokenToLocalStorage = (token: Token) => {
+  localStorage.setItem("token", JSON.stringify(token));
 };
 
-const getTokenFromLocalStorage = (): string | null => {
-  return localStorage.getItem("token");
+const getTokenFromLocalStorage = (): Token | null => {
+  return JSON.parse(localStorage.getItem("token") || "null");
 };
 
 const removeTokenFromLocalStorage = () => {

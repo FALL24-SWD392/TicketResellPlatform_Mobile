@@ -1,9 +1,10 @@
 import axios, { AxiosInstance } from "axios";
 import { lsUtil } from "./localStorage.util";
 import { API_URL } from "@env";
+import { Token } from "../@type/user.type";
 class Http {
   instance: AxiosInstance;
-  token: string | null;
+  token: Token | null;
 
   constructor() {
     this.token = lsUtil.getToken();
@@ -18,7 +19,7 @@ class Http {
       (config) => {
         this.token = this.token ? this.token : lsUtil.getToken();
         if (this.token) {
-          config.headers.Authorization = `Bearer ${this.token}`;
+          config.headers.Authorization = `Bearer ${this.token.accessToken}`;
           return config;
         }
         return config;
